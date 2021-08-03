@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/root_layout_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.layouts.AddNewActivityFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/edit_personal_info_toolbar"
+            layout="@layout/single_title_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/name_et"
+                style="@style/light_blue_rectangle_edit_text"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:hint="@string/type_here"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_blue_text" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_name"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/height" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/height_et"
+                        style="@style/light_blue_rectangle_edit_text"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/light_blue_rectangle_with_spinner_left"
+                        android:gravity="center"
+                        android:hint="@string/type_here"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/light_blue_text" />
+
+                </FrameLayout>
+
+                <Spinner
+                    android:id="@+id/height_spinner"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_blue_rectangle_with_spinner_right"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/height_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_height"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/age" />
+
+            <EditText
+                android:id="@+id/age_et"
+                style="@style/light_blue_rectangle_edit_text"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:hint="@string/type_here"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_blue_text" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/age_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_age"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/weight" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/weight_et"
+                        style="@style/light_blue_rectangle_edit_text"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/light_blue_rectangle_with_spinner_left"
+                        android:gravity="center"
+                        android:hint="@string/type_here"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/light_blue_text" />
+
+                </FrameLayout>
+
+                <Spinner
+                    android:id="@+id/weight_spinner"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_blue_rectangle_with_spinner_right"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/weight_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_weight"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/edit_info_btn"
+            style="@style/light_blue_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/items_separate_amount"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/edit_info"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+

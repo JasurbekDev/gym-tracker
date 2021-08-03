@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".view.layouts.SignUpFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/edge_margins"
+            android:paddingRight="@dimen/edge_margins">
+
+            <TextView
+                style="@style/bold_poppins_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/items_separate_amount"
+                android:text="@string/welcome" />
+
+            <EditText
+                android:id="@+id/user_name_edittext"
+                style="@style/light_blue_rectangle_edit_text"
+                android:layout_marginBottom="0dp"
+                android:hint="@string/name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/user_name_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/user_height_edittext"
+                        style="@style/light_blue_rectangle_edit_text"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/light_blue_rectangle_with_spinner_left"
+                        android:hint="@string/height"
+                        android:inputType="numberDecimal" />
+
+                </FrameLayout>
+
+                <Spinner
+                    android:id="@+id/sign_up_height_spinner"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_blue_rectangle_with_spinner_right"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_height_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/user_age_edittext"
+                style="@style/light_blue_rectangle_edit_text"
+                android:hint="@string/age"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/user_age_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/user_weight_edittext"
+                        style="@style/light_blue_rectangle_edit_text"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/light_blue_rectangle_with_spinner_left"
+                        android:hint="@string/weight"
+                        android:inputType="numberDecimal" />
+
+                </FrameLayout>
+
+                <Spinner
+                    android:id="@+id/sign_up_weight_spinner"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_blue_rectangle_with_spinner_right"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_weight_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/user_email_edittext"
+                style="@style/light_blue_rectangle_edit_text"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/user_email_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/user_password_edittext"
+                style="@style/light_blue_rectangle_edit_text"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/user_password_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/user_confirm_password_edittext"
+                style="@style/light_blue_rectangle_edit_text"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/user_confirm_password_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/passwords_don_t_match"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/sign_up_button"
+                style="@style/button"
+                android:layout_marginBottom="@dimen/items_separate_amount"
+                android:text="@string/sign_up" />
+
+            <TextView
+                android:id="@+id/have_account_tv"
+                style="@style/dark_gray_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/have_an_account" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/sign_up_progress_bar"
+        layout="@layout/progress_bar"
+        android:layout_width="@dimen/progress_bar_bg_size"
+        android:layout_height="@dimen/progress_bar_bg_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

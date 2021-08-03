@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/root_layout_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.layouts.AddNewActivityFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/add_new_activity_toolbar"
+            layout="@layout/single_title_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/edit_activity_toolbar"
+            layout="@layout/edit_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/select_date" />
+
+            <TextView
+                android:id="@+id/date_tv"
+                style="@style/light_blue_rectangle"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:text="@string/click_here"
+                android:textColor="@color/light_blue_text"
+                android:textSize="@dimen/regular_text_size" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_date"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/items_separate_amount">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/select_activity" />
+
+            <Spinner
+                android:id="@+id/activity_spinner"
+                style="@style/light_blue_rectangle"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/times_performed" />
+
+            <EditText
+                android:id="@+id/times_performed_et"
+                style="@style/light_blue_rectangle_edit_text"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:hint="@string/type_here"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_blue_text" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/times_performed_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_amount"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/duration" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/duration_et"
+                        style="@style/light_blue_rectangle_edit_text"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/light_blue_rectangle_with_spinner_left"
+                        android:gravity="center"
+                        android:hint="@string/type_here"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/light_blue_text" />
+
+                </FrameLayout>
+
+                <Spinner
+                    android:id="@+id/durationSpinner"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_blue_rectangle_with_spinner_right"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/duration_error_text"
+            style="@style/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insert_duration"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/items_separate_amount">
+
+            <TextView
+                style="@style/dark_gray_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/additional_notes" />
+
+            <EditText
+                android:id="@+id/additional_notes_et"
+                style="@style/light_blue_rectangle_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="137dp"
+                android:layout_weight="2"
+                android:gravity="start|top"
+                android:hint="@string/type_here"
+                android:inputType="textMultiLine"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_blue_text" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_new_activity_btn"
+            style="@style/light_blue_rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/items_separate_amount"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/add_activity"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+

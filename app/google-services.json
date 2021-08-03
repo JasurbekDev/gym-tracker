@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "569948675295",
+    "project_id": "gym-tracker-91494",
+    "storage_bucket": "gym-tracker-91494.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569948675295:android:f24717f603ad83e57f5d6a",
+        "android_client_info": {
+          "package_name": "com.idyllic.activitytracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569948675295-ar7o0dolg0erkh4b3cak747fvc9r471d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtGHrRNnIMPKGsXIu5DCeylcMDr4QIPGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569948675295-ar7o0dolg0erkh4b3cak747fvc9r471d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/edge_margins"
+    android:layout_marginRight="@dimen/edge_margins"
+    android:layout_marginBottom="@dimen/items_separate_amount"
+    android:background="@drawable/light_blue_rectangle"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_name"
+            style="@style/dark_gray_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:text="Biking" />
+
+        <TextView
+            android:id="@+id/activity_date"
+            style="@style/dark_gray_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/light_blue_text"
+            tools:text="07/01/2021" />
+
+        <TextView
+            android:id="@+id/activity_duration"
+            style="@style/dark_gray_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="@string/activity_duration"
+            android:textColor="@color/light_blue_text" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_calories"
+        style="@style/dark_gray_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:gravity="center_vertical|end"
+        android:text="@string/activity_calories"
+        android:textColor="@color/light_blue_text"
+        android:textSize="15sp"
+        tools:text="210 cal" />
+
+</LinearLayout>

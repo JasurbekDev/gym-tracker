@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".view.layouts.LogInFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-25dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lifting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/log_in_bg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/edge_margins"
+            android:paddingRight="@dimen/edge_margins"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                style="@style/bold_poppins_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="35dp"
+                android:text="@string/welcome" />
+
+            <EditText
+                android:id="@+id/log_in_email"
+                style="@style/light_blue_rectangle_edit_text"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/log_in_email_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/log_in_password"
+                style="@style/light_blue_rectangle_edit_text"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/log_in_password_error_text"
+                style="@style/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_should_not_be_empty"
+                android:visibility="invisible" />
+
+            <CheckBox
+                android:id="@+id/keep_logged_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/items_separate_amount"
+                android:text="@string/keep_me_logged_in"
+                android:textColor="@color/dark_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/items_separate_amount"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/log_in_button"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="18dp"
+                        android:text="@string/log_in" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/log_in_to_sample_account"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_margin="0dp"
+                        android:layout_marginBottom="18dp"
+                        android:text="@string/sample_account"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dont_have_account_tv"
+                style="@style/dark_gray_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/dont_have_an_account" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/log_in_progress_bar"
+        layout="@layout/progress_bar"
+        android:layout_width="@dimen/progress_bar_bg_size"
+        android:layout_height="@dimen/progress_bar_bg_size"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>
