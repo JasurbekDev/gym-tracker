@@ -62,8 +62,8 @@
 
     <style name="root_layout_style">
         <item name="android:background">@color/dark_blue</item>
-        <item name="android:paddingLeft">@dimen/edge_margins</item>
-        <item name="android:paddingRight">@dimen/edge_margins</item>
+        <item name="android:paddingStart">@dimen/edge_margins</item>
+        <item name="android:paddingEnd">@dimen/edge_margins</item>
     </style>
 
 </resources>

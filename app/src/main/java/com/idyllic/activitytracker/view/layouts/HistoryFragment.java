@@ -15,6 +15,7 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -53,7 +54,15 @@ public class HistoryFragment extends Fragment implements HistoryAdapter.HistoryA
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_history, container, false);
+
+        // Setting fragment theme. Source: https://stackoverflow.com/questions/9469174/set-theme-for-a-fragment
+        // create ContextThemeWrapper from the original Activity Context with the custom theme
+        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.HomeTheme);
+
+        // clone the inflater using the ContextThemeWrapper
+        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapper);
+
+        View view = localInflater.inflate(R.layout.fragment_history, container, false);
 
         viewModel = new ViewModelProvider(requireActivity()).get(ActivityViewModel.class);
         sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
@@ -149,7 +158,7 @@ public class HistoryFragment extends Fragment implements HistoryAdapter.HistoryA
         svCloseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toolbarSearchView.onActionViewCollapsed();
+//                toolbarSearchView.onActionViewCollapsed();
                 hideSearchView();
             }
         });
@@ -206,6 +215,7 @@ public class HistoryFragment extends Fragment implements HistoryAdapter.HistoryA
     }
 
     private void hideSearchView() {
+        toolbarSearchView.onActionViewCollapsed();
         toolbarTv.setVisibility(View.VISIBLE);
         toolbarSearchIcon.setVisibility(View.VISIBLE);
         toolbarSearchView.setVisibility(View.GONE);
